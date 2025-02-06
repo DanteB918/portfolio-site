@@ -111,3 +111,39 @@ window.addEventListener('click', (event) => {
         document.body.style.overflow = 'auto';
     }
 });
+
+// Scroll Animation
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            // Once the animation is done, we can unobserve the element
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe all project cards
+document.querySelectorAll('.project-card').forEach(card => {
+    observer.observe(card);
+});
+
+// Optional: Trigger animation for cards that are already in view on page load
+function animateInitialCards() {
+    document.querySelectorAll('.project-card').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            card.classList.add('animate');
+            observer.unobserve(card);
+        }
+    });
+}
+
+// Run on page load
+window.addEventListener('load', animateInitialCards);
