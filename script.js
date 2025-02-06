@@ -39,3 +39,75 @@ if (contactForm) {
         this.reset();
     });
 }
+
+// Project data
+const projectData = {
+    1: {
+        title: "Web Application Dashboard",
+        image: "https://picsum.photos/800/600?random=1",
+        description: "A comprehensive web dashboard that provides real-time analytics and data visualization. Built with React and D3.js, this application helps businesses track key performance indicators and make data-driven decisions."
+    },
+    2: {
+        title: "E-commerce Platform",
+        image: "https://picsum.photos/800/600?random=2",
+        description: "A full-featured e-commerce platform with secure payment processing, inventory management, and customer relationship management. Implemented using Node.js and MongoDB with a responsive front-end design."
+    },
+    3: {
+        title: "Mobile App Design",
+        image: "https://picsum.photos/800/600?random=3",
+        description: "A modern mobile application designed for both iOS and Android platforms using Flutter. Features include user authentication, real-time notifications, and offline functionality."
+    },
+    4: {
+        title: "AI Integration System",
+        image: "https://picsum.photos/800/600?random=4",
+        description: "An innovative AI system that integrates machine learning models into existing business processes. Built using Python and TensorFlow, it provides predictive analytics and automated decision-making capabilities."
+    },
+    5: {
+        title: "IoT Smart Home",
+        image: "https://picsum.photos/800/600?random=5",
+        description: "A comprehensive smart home solution that connects and controls various IoT devices. Features include automated scheduling, energy monitoring, and remote control through a mobile app."
+    },
+    6: {
+        title: "Blockchain Solution",
+        image: "https://picsum.photos/800/600?random=6",
+        description: "A blockchain-based solution for secure and transparent record-keeping. Implemented using Ethereum smart contracts and Web3.js for seamless integration with existing web applications."
+    }
+};
+
+// Modal elements
+const modal = document.getElementById('projectModal');
+const modalImage = document.getElementById('modalImage');
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
+const closeButton = document.querySelector('.close-button');
+
+// Add click event listeners to project cards
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const projectId = card.dataset.project;
+        const project = projectData[projectId];
+        
+        // Update modal content
+        modalImage.src = project.image;
+        modalTitle.textContent = project.title;
+        modalDescription.textContent = project.description;
+        
+        // Show modal
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    });
+});
+
+// Close modal when clicking the close button
+closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+});
+
+// Close modal when clicking outside the modal content
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
