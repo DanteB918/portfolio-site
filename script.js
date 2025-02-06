@@ -134,7 +134,12 @@ document.querySelectorAll('.project-card').forEach(card => {
     observer.observe(card);
 });
 
-// Optional: Trigger animation for cards that are already in view on page load
+// Observe skill items for animation
+document.querySelectorAll('.skill-item').forEach(item => {
+    observer.observe(item);
+});
+
+// Initialize project cards that are already in view
 function animateInitialCards() {
     document.querySelectorAll('.project-card').forEach(card => {
         const rect = card.getBoundingClientRect();
@@ -145,5 +150,19 @@ function animateInitialCards() {
     });
 }
 
+// Initialize skill items that are already in view
+function animateInitialSkills() {
+    document.querySelectorAll('.skill-item').forEach(item => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            item.classList.add('animate');
+            observer.unobserve(item);
+        }
+    });
+}
+
 // Run on page load
-window.addEventListener('load', animateInitialCards);
+window.addEventListener('load', () => {
+    animateInitialCards();
+    animateInitialSkills();
+});
