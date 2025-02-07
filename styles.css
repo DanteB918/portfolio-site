@@ -58,6 +58,7 @@ body {
     padding-top: 120px;
     background: var(--primary-color);
     position: relative;
+    height: 100vh;
 }
 
 .profile-image-container {
@@ -393,7 +394,6 @@ html {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
@@ -405,8 +405,13 @@ html {
     
     .hero-section {
         text-align: center;
+        height: 100%;
     }
-    
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
     .profile-image {
         width: 250px;
         height: 250px;

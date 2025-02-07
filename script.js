@@ -12,7 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -166,3 +166,7 @@ window.addEventListener('load', () => {
     animateInitialCards();
     animateInitialSkills();
 });
+
+// Set the current year dynamically
+const currentYear = new Date().getFullYear();
+document.getElementById('current-year').textContent = currentYear;
