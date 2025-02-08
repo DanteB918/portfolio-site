@@ -223,3 +223,4 @@ seeMore.addEventListener('click', () => {
 
     seeMore.innerHTML = seeMore.innerHTML == 'See More' ? 'See Less' : 'See More';
 });
+
