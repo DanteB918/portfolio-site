@@ -35,6 +35,10 @@
     margin: 0;
 }
 
+.sidebar-menu li a.active {
+    color: var(--secondary-color);
+}
+
 .sponsor-button {
     display: inline-flex;
     align-items: center;
@@ -513,6 +517,10 @@ html {
         width: 250px;
         height: 250px;
         margin-bottom: 30px;
+    }
+
+    .projects-grid {
+        padding: 0;
     }
 
     .social-icons {
