@@ -35,6 +35,30 @@
     margin: 0;
 }
 
+.sponsor-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #24292e;
+    color: #ffffff;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.sponsor-button:hover {
+    background-color: #32383e;
+    border-color: #8b949e;
+}
+
+.sponsor-button i {
+    color: #ff69b4
+}
+
 .sidebar-menu li {
     margin-bottom: 10px;
 }
