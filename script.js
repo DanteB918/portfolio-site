@@ -224,3 +224,7 @@ seeMore.addEventListener('click', () => {
     seeMore.innerHTML = seeMore.innerHTML == 'See More' ? 'See Less' : 'See More';
 });
 
+
+if (window.innerWidth < 1000) { // @todo: find a better way to do this
+    document.querySelector('.sidebar').classList.add('closed');
+}
