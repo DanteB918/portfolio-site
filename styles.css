@@ -25,6 +25,8 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+    margin-top: 30%;
+    text-align: center;
 }
 
 .sidebar-menu {
@@ -40,6 +42,10 @@
 .sidebar-menu a {
     color: #fff;
     text-decoration: none;
+}
+
+.more-skills {
+    display: none;
 }
 
 .sidebar.closed {
@@ -231,6 +237,12 @@ h2 i {
 .skill-item:nth-child(10) { transition-delay: 0.55s; }
 .skill-item:nth-child(11) { transition-delay: 0.6s; }
 .skill-item:nth-child(12) { transition-delay: 0.65s; }
+.skill-item:nth-child(13) { transition-delay: 0.7s; }
+.skill-item:nth-child(14) { transition-delay: 0.75s; }
+.skill-item:nth-child(15) { transition-delay: 0.8s; }
+.skill-item:nth-child(16) { transition-delay: 0.85s; }
+.skill-item:nth-child(17) { transition-delay: 0.9s; }
+.skill-item:nth-child(18) { transition-delay: 0.95s; }
 
 /* Skills Grid */
 .skills-grid {

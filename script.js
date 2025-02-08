@@ -211,3 +211,15 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// See more skills
+const seeMore = document.getElementById('see-more');
+const moreSkills = document.querySelectorAll('.more-skills');
+
+seeMore.addEventListener('click', () => {
+    moreSkills.forEach(skill => {
+        skill.classList.toggle('more-skills');
+    });
+
+    seeMore.innerHTML = seeMore.innerHTML == 'See More' ? 'See Less' : 'See More';
+});
