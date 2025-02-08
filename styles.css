@@ -9,32 +9,60 @@
     --section-padding: 80px 0;
 }
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Fixed width */
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+.sidebar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar.closed {
+    width: 0; /* Collapsed state */
+    overflow: hidden;
+    display: none;
+}
+
+.main-content {
+    margin-left: 250px; /* Default margin when sidebar is open */
+    padding: 20px; /* Add padding */
+    transition: margin-left 0.3s ease; /* Smooth transition for margin */
+}
+
+.sidebar.closed + .main-content {
+    margin-left: 0; /* Reset margin when sidebar is closed */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.6;
-}
-
-/* Navbar Styles */
-.navbar {
-    background-color: var(--primary-color);
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.navbar-brand {
-    font-weight: bold;
-    color: var(--secondary-color);
-    font-size: 24px;
 }
 
 .nav-link {
@@ -394,15 +422,48 @@ html {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.toggle-sidebar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.main-content.collapsed {
+    margin-left: 0;
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
     }
-    
+
     h2 {
         font-size: 2rem;
     }
-    
+
+    .main-content {
+        opacity: 0;
+        padding: 20px; /* Add padding */
+        overflow: hidden;
+    }
+
+    .sidebar.closed + .main-content {
+        transition: opacity 0.3s ease;
+        opacity: 1; /* Reset margin when sidebar is closed */
+    }
+
+    .sidebar.closed {
+        width: 0;
+        overflow: hidden;
+        display: none;
+    }
+
     .hero-section {
         text-align: center;
         height: 100%;
@@ -417,12 +478,12 @@ html {
         height: 250px;
         margin-bottom: 30px;
     }
-    
+
     .social-icons {
         margin-top: 20px;
         text-align: center;
     }
-    
+
     .modal-grid {
         grid-template-columns: 1fr;
     }

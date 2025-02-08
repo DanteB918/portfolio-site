@@ -21,7 +21,7 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    document.querySelectorAll('.nav-link').forEach(link => {
+    sidebarLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').substring(1) === current) {
             link.classList.add('active');
@@ -170,3 +170,44 @@ window.addEventListener('load', () => {
 // Set the current year dynamically
 const currentYear = new Date().getFullYear();
 document.getElementById('current-year').textContent = currentYear;
+
+// Toggle sidebar
+const toggleButton = document.querySelector('.toggle-sidebar');
+const sidebar = document.querySelector('.sidebar');
+const sidebarLinks = document.querySelectorAll('.sidebar-menu a');
+
+toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('closed');
+    document.querySelector('.main-content').classList.toggle('collapsed'); // Toggle class for main content
+});
+
+if (window.innerWidth < 1000) {
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            sidebar.classList.toggle('closed');
+            document.querySelector('.main-content').classList.toggle('collapsed'); // Toggle class for main content
+        });
+    });
+
+}
+
+// Highlight active section on scroll
+const sections = document.querySelectorAll('section');
+
+window.addEventListener('scroll', () => {
+    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${section.id}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+});

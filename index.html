@@ -9,207 +9,194 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">DB</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home"><i class="fas fa-home"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects"><i class="fas fa-code"></i> Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#donations"><i class="fas fa-heart"></i> Donations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills"><i class="fas fa-laptop-code"></i> Skills</a>
-                    </li>
-                </ul>
-            </div>
+    <button class="toggle-sidebar">Toggle Sidebar</button>
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <a href="#home">DB</a>
         </div>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="profile-image-container">
-                        <!-- Placeholder for profile image -->
-                        <img src="https://avatars.githubusercontent.com/u/100642899?v=4" alt="Dante Bradshaw" class="profile-image">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h1>Dante Bradshaw</h1>
-                    <p class="lead">
-                        Hey there, I'm Dante Bradshaw, a passionate software developer with a knack for crafting elegant solutions to complex problems. My journey into the world of code began with a curious mind and a determination to bring ideas to life through technology.
-                        <br><br>
-                        With a strong foundation in Laravel PHP, I've honed my skills in creating robust web applications that not only meet clients' needs but also exceed their expectations. I believe that clean, maintainable code is the cornerstone of any successful project, and I take pride in my ability to architect systems that stand the test of time.
-                    </p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2><i class="fas fa-code"></i> Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item" data-tooltip="JavaScript">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                </div>
-                <div class="skill-item" data-tooltip="Python">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                </div>
-                <div class="skill-item" data-tooltip="React">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-                </div>
-                <div class="skill-item" data-tooltip="Node.js">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
-                </div>
-                <div class="skill-item" data-tooltip="TypeScript">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
-                </div>
-                <div class="skill-item" data-tooltip="HTML5">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-                </div>
-                <div class="skill-item" data-tooltip="CSS3">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-                </div>
-                <div class="skill-item" data-tooltip="Vue.js">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js">
-                </div>
-                <div class="skill-item" data-tooltip="Docker">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-                </div>
-                <div class="skill-item" data-tooltip="Git">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-                </div>
-                <div class="skill-item" data-tooltip="MongoDB">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
-                </div>
-                <div class="skill-item" data-tooltip="PostgreSQL">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card" data-project="1">
-                    <img src="https://picsum.photos/400/300?random=1" alt="Project 1">
-                    <h3>Web Application Dashboard</h3>
-                </div>
-                <div class="project-card" data-project="2">
-                    <img src="https://picsum.photos/400/300?random=2" alt="Project 2">
-                    <h3>E-commerce Platform</h3>
-                </div>
-                <div class="project-card" data-project="3">
-                    <img src="https://picsum.photos/400/300?random=3" alt="Project 3">
-                    <h3>Mobile App Design</h3>
-                </div>
-                <div class="project-card" data-project="4">
-                    <img src="https://picsum.photos/400/300?random=4" alt="Project 4">
-                    <h3>AI Integration System</h3>
-                </div>
-                <div class="project-card" data-project="5">
-                    <img src="https://picsum.photos/400/300?random=5" alt="Project 5">
-                    <h3>IoT Smart Home</h3>
-                </div>
-                <div class="project-card" data-project="6">
-                    <img src="https://picsum.photos/400/300?random=6" alt="Project 6">
-                    <h3>Blockchain Solution</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal -->
-    <div class="modal" id="projectModal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <div class="modal-grid">
-                <div class="modal-image">
-                    <img src="" alt="Project Image" id="modalImage">
-                </div>
-                <div class="modal-details">
-                    <h2 id="modalTitle"></h2>
-                    <p id="modalDescription"></p>
-                </div>
-            </div>
+        <ul class="sidebar-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
         </div>
     </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2><i class="fas fa-paper-plane"></i> Contact Me</h2>
-            <form id="contact-form">
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            <input type="text" class="form-control" placeholder="First Name" required>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="profile-image-container">
+                            <img src="https://avatars.githubusercontent.com/u/100642899?v=4" alt="Dante Bradshaw" class="profile-image">
                         </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            <input type="text" class="form-control" placeholder="Last Name" required>
+                    <div class="col-md-6">
+                        <h1>Dante Bradshaw</h1>
+                        <p class="lead">
+                            Hey there, I'm Dante Bradshaw, a passionate software developer with a knack for crafting elegant solutions to complex problems. My journey into the world of code began with a curious mind and a determination to bring ideas to life through technology.
+                            <br><br>
+                            With a strong foundation in Laravel PHP, I've honed my skills in creating robust web applications that not only meet clients' needs but also exceed their expectations. I believe that clean, maintainable code is the cornerstone of any successful project, and I take pride in my ability to architect systems that stand the test of time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2><i class="fas fa-code"></i> Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tooltip="JavaScript">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    </div>
+                    <div class="skill-item" data-tooltip="Python">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
+                    <div class="skill-item" data-tooltip="React">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                    </div>
+                    <div class="skill-item" data-tooltip="Node.js">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                    </div>
+                    <div class="skill-item" data-tooltip="TypeScript">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                    </div>
+                    <div class="skill-item" data-tooltip="HTML5">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                    </div>
+                    <div class="skill-item" data-tooltip="CSS3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                    </div>
+                    <div class="skill-item" data-tooltip="Vue.js">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js">
+                    </div>
+                    <div class="skill-item" data-tooltip="Docker">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                    </div>
+                    <div class="skill-item" data-tooltip="Git">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    </div>
+                    <div class="skill-item" data-tooltip="MongoDB">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                    </div>
+                    <div class="skill-item" data-tooltip="PostgreSQL">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-project="1">
+                        <img src="https://picsum.photos/400/300?random=1" alt="Project 1">
+                        <h3>Web Application Dashboard</h3>
+                    </div>
+                    <div class="project-card" data-project="2">
+                        <img src="https://picsum.photos/400/300?random=2" alt="Project 2">
+                        <h3>E-commerce Platform</h3>
+                    </div>
+                    <div class="project-card" data-project="3">
+                        <img src="https://picsum.photos/400/300?random=3" alt="Project 3">
+                        <h3>Mobile App Design</h3>
+                    </div>
+                    <div class="project-card" data-project="4">
+                        <img src="https://picsum.photos/400/300?random=4" alt="Project 4">
+                        <h3>AI Integration System</h3>
+                    </div>
+                    <div class="project-card" data-project="5">
+                        <img src="https://picsum.photos/400/300?random=5" alt="Project 5">
+                        <h3>IoT Smart Home</h3>
+                    </div>
+                    <div class="project-card" data-project="6">
+                        <img src="https://picsum.photos/400/300?random=6" alt="Project 6">
+                        <h3>Blockchain Solution</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal" id="projectModal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="modal-grid">
+                    <div class="modal-image">
+                        <img src="" alt="Project Image" id="modalImage">
+                    </div>
+                    <div class="modal-details">
+                        <h2 id="modalTitle"></h2>
+                        <p id="modalDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2><i class="fas fa-paper-plane"></i> Contact Me</h2>
+                <form id="contact-form">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="First Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="Last Name" required>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="mb-3">
-                    <div class="input-group">
-                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                        <input type="email" class="form-control" placeholder="Email" required>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3">
-                    <div class="input-group">
-                        <span class="input-group-text"><i class="fas fa-pencil-alt"></i></span>
-                        <textarea class="form-control" placeholder="Subject" rows="5" required></textarea>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-pencil-alt"></i></span>
+                            <textarea class="form-control" placeholder="Subject" rows="5" required></textarea>
+                        </div>
                     </div>
-                </div>
-                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
-            </form>
-        </div>
-    </section>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+        </section>
 
-    <!-- Donations Section -->
-    <section id="donations" class="section">
-        <div class="container">
-            <h2><i class="fas fa-gift"></i> Support My Work</h2>
-            <!-- Donation content will go here -->
-        </div>
-    </section>
+        <!-- Donations Section -->
+        <section id="donations" class="section">
+            <div class="container">
+                <h2><i class="fas fa-gift"></i> Support My Work</h2>
+                <!-- Donation content will go here -->
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p><i class="far fa-copyright"></i> Created by Dante Bradshaw | <span id="current-year">{{ new Date().getFullYear() }}</span><br> All rights reserved.</p>
-        </div>
-    </footer>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p><i class="far fa-copyright"></i> Created by Dante Bradshaw | <span id="current-year">{{ new Date().getFullYear() }}</span><br> All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
