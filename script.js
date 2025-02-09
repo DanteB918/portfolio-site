@@ -214,6 +214,7 @@ if (window.innerWidth < 1000) {
 
                 sidebar.classList.add('closed');
                 document.querySelector('.main-content').classList.add('collapsed');
+                document.querySelector('#hamburger').classList.toggle('is-active');
 
                 setTimeout(() => {
                     targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -259,5 +260,6 @@ seeMore.addEventListener('click', () => {
 
 if (window.innerWidth < 1000) { // @todo: find a better way to do this
     document.querySelector('.sidebar').classList.add('closed');
+    document.querySelector('#hamburger').classList.remove('is-active');
     document.querySelector('.main-content').classList.add('collapsed');
 }
