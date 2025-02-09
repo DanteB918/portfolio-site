@@ -76,12 +76,12 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
         const projectId = card.dataset.project;
         const project = projectData[projectId];
-        
+
         // Update modal content
         modalImage.src = project.image;
         modalTitle.textContent = project.title;
         modalDescription.innerHTML = project.description;
-        
+
         // Show modal
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
