@@ -35,32 +35,45 @@ const projectData = {
     1: {
         title: "Wallos",
         image: "assets/projects/wallos-dashboard-dark.png",
-        description: "Wallos is a powerful, open-source, and self-hostable web application designed to empower you in managing your finances with ease. Say goodbye to complicated spreadsheets and expensive financial software – Wallos simplifies the process of tracking expenses and helps you gain better control over your financial life. I had the privilege of contributing to the development of this open-source application."
+        description: "Wallos is a powerful, open-source, and self-hostable web application designed to empower you in managing your finances with ease. Say goodbye to complicated spreadsheets and expensive financial software – Wallos simplifies the process of tracking expenses and helps you gain better control over your financial life. I had the privilege of contributing to the development of this open-source application.",
+        sourceCode: "https://github.com/DanteB918/Wallos",
     },
     2: {
         title: "Customer Tracking System",
         image: "assets/projects/customer-track.png",
-        description: "Customer Track is a cloud-based customer tracking system designed to streamline sales processes and enhance customer relationships. This web-based application provides businesses with a centralized platform to manage contacts, track leads, store customer information, and analyze sales performance. With easy-to-use tools and real-time data, Customer Track helps businesses drive growth, increase revenue, and stay ahead of the competition."
+        description: "Customer Track is a cloud-based customer tracking system designed to streamline sales processes and enhance customer relationships. This web-based application provides businesses with a centralized platform to manage contacts, track leads, store customer information, and analyze sales performance. With easy-to-use tools and real-time data, Customer Track helps businesses drive growth, increase revenue, and stay ahead of the competition.",
+        actionLink: "https://customertrackapp.com",
+        actionText: "Visit Website"
     },
     3: {
         title: "Phaser Game",
         image: "assets/projects/phaser-game.png",
-        description: "This is a game built with Phaser.js. Phaser is an open-source HTML5 game engine that makes it easy to build cross-platform games. The game is a simple platformer where you control a character and navigate through a level. The game features a scoring system, collision detection, and a simple AI that allows the character to move around."
+        description: "This is a game built with Phaser.js. Phaser is an open-source HTML5 game engine that makes it easy to build cross-platform games. The game is a simple platformer where you control a character and navigate through a level. The game features a scoring system, collision detection, and a simple AI that allows the character to move around.",
+        sourceCode: "https://github.com/DanteB918/wizard-game",
+        actionLink: "https://danteb918.github.io/wizard-game/",
+        actionText: "Play Game"
     },
     4: {
         title: "PokeDex Extension",
         image: "assets/projects/pokedex-img.png",
-        description: `Chrome extension for looking up pokemon from the browser, using the <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">Pokemon API</a>, we can take the user's input of the pokemon name and look it up using HTTP requests. I also made this same application for mobile, using React Native!`
+        description: `Chrome extension for looking up pokemon from the browser, using the <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">Pokemon API</a>, we can take the user's input of the pokemon name and look it up using HTTP requests. I also made this same application for mobile, using React Native!`,
+        sourceCode: "https://github.com/DanteB918/PokeDextension",
+        actionLink: "https://chrome.google.com/webstore/detail/pok%C3%A9dextension/abodchomfjonjkangmkadfacjlmjkgof",
+        actionText: "Install Extension"
     },
     5: {
         title: "SneezeIO",
         image: "assets/projects/sneezeio-pic.png",
-        description: "This was more of a joke at the time but I decided to really build it. It's a desktop application that you would use to record sneezes! This was my first time building a desktop application. If you'd like to download it and give it a shot, you can do so by clicking the button below (only currently for Windows!)."
+        description: "This was more of a joke at the time but I decided to really build it. It's a desktop application that you would use to record sneezes! This was my first time building a desktop application. If you'd like to download it and give it a shot, you can do so by clicking the button below (only currently for Windows!).",
+        sourceCode: "https://github.com/DanteB918/sneeze.io",
+        actionLink: "assets/projects/Sneeze.io.exe",
+        actionText: "Download for Windows"
     },
     6: {
         title: "MTG GatherHub",
         image: "assets/projects/mtg-gatherhub.png",
-        description: "MTG GatherHub is a web application built with Laravel 10 that allows users to find games of Magic: The Gathering in their local area. Users can search for games by location, format, and date, and can also create and manage their own games. The application uses a combination of Google Maps and a custom-built algorithm to match players with games that fit their preferences. I built this application to help the Magic: The Gathering community find and connect with each other, and to provide a valuable service to players looking for games."
+        description: "MTG GatherHub is a web application built with Laravel 10 that allows users to find games of Magic: The Gathering in their local area. Users can search for games by location, format, and date, and can also create and manage their own games. The application uses a combination of Google Maps and a custom-built algorithm to match players with games that fit their preferences. I built this application to help the Magic: The Gathering community find and connect with each other, and to provide a valuable service to players looking for games.",
+        sourceCode: "https://github.com/DanteB918/find-mtg-games"
     }
 };
 
@@ -70,6 +83,8 @@ const modalImage = document.getElementById('modalImage');
 const modalTitle = document.getElementById('modalTitle');
 const modalDescription = document.getElementById('modalDescription');
 const closeButton = document.querySelector('.close-button');
+const sourceCodeLink = document.getElementById('sourceCodeLink');
+const actionLink = document.getElementById('actionLink');
 
 // Add click event listeners to project cards
 document.querySelectorAll('.project-card').forEach(card => {
@@ -81,6 +96,23 @@ document.querySelectorAll('.project-card').forEach(card => {
         modalImage.src = project.image;
         modalTitle.textContent = project.title;
         modalDescription.innerHTML = project.description;
+
+        // Handle source code link
+        if (project.sourceCode) {
+            sourceCodeLink.href = project.sourceCode;
+            sourceCodeLink.style.display = 'inline-block';
+        } else {
+            sourceCodeLink.style.display = 'none';
+        }
+
+        // Handle action link (website/download)
+        if (project.actionLink) {
+            actionLink.href = project.actionLink;
+            actionLink.textContent = project.actionText || 'Visit Project';
+            actionLink.style.display = 'inline-block';
+        } else {
+            actionLink.style.display = 'none';
+        }
 
         // Show modal
         modal.style.display = 'block';

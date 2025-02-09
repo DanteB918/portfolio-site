@@ -399,6 +399,11 @@ h2 i {
     padding: 20px;
 }
 
+.modal-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
 .close-button {
     position: absolute;
     right: 20px;
