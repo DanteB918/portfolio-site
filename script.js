@@ -39,7 +39,7 @@ const projectData = {
         sourceCode: "https://github.com/DanteB918/Wallos",
     },
     2: {
-        title: "Customer Tracking System",
+        title: "Customer Track",
         image: "assets/projects/customer-track.png",
         description: "Customer Track is a cloud-based customer tracking system designed to streamline sales processes and enhance customer relationships. This web-based application provides businesses with a centralized platform to manage contacts, track leads, store customer information, and analyze sales performance. With easy-to-use tools and real-time data, Customer Track helps businesses drive growth, increase revenue, and stay ahead of the competition.",
         actionLink: "https://customertrackapp.com",
