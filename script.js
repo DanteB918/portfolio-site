@@ -205,12 +205,22 @@ toggleButton.addEventListener('click', () => {
 
 if (window.innerWidth < 1000) {
     sidebarLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            sidebar.classList.toggle('closed');
-            document.querySelector('.main-content').classList.toggle('collapsed'); // Toggle class for main content
+        link.addEventListener('click', (e) => {
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                e.preventDefault();
+
+                sidebar.classList.add('closed');
+                document.querySelector('.main-content').classList.add('collapsed');
+
+                setTimeout(() => {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }, 300);
+            }
         });
     });
-
 }
 
 // Highlight active section on scroll
@@ -249,4 +259,5 @@ seeMore.addEventListener('click', () => {
 
 if (window.innerWidth < 1000) { // @todo: find a better way to do this
     document.querySelector('.sidebar').classList.add('closed');
+    document.querySelector('.main-content').classList.add('collapsed');
 }
