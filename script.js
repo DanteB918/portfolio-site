@@ -33,34 +33,34 @@ window.addEventListener('scroll', () => {
 // Project data
 const projectData = {
     1: {
-        title: "Web Application Dashboard",
-        image: "https://picsum.photos/800/600?random=1",
-        description: "A comprehensive web dashboard that provides real-time analytics and data visualization. Built with React and D3.js, this application helps businesses track key performance indicators and make data-driven decisions."
+        title: "Wallos",
+        image: "assets/projects/wallos-dashboard-dark.png",
+        description: "Wallos is a powerful, open-source, and self-hostable web application designed to empower you in managing your finances with ease. Say goodbye to complicated spreadsheets and expensive financial software – Wallos simplifies the process of tracking expenses and helps you gain better control over your financial life. I had the privilege of contributing to the development of this open-source application."
     },
     2: {
-        title: "E-commerce Platform",
-        image: "https://picsum.photos/800/600?random=2",
-        description: "A full-featured e-commerce platform with secure payment processing, inventory management, and customer relationship management. Implemented using Node.js and MongoDB with a responsive front-end design."
+        title: "Customer Tracking System",
+        image: "assets/projects/customer-track.png",
+        description: "Customer Track is a cloud-based customer tracking system designed to streamline sales processes and enhance customer relationships. This web-based application provides businesses with a centralized platform to manage contacts, track leads, store customer information, and analyze sales performance. With easy-to-use tools and real-time data, Customer Track helps businesses drive growth, increase revenue, and stay ahead of the competition."
     },
     3: {
-        title: "Mobile App Design",
-        image: "https://picsum.photos/800/600?random=3",
-        description: "A modern mobile application designed for both iOS and Android platforms using Flutter. Features include user authentication, real-time notifications, and offline functionality."
+        title: "Phaser Game",
+        image: "assets/projects/phaser-game.png",
+        description: "This is a game built with Phaser.js. Phaser is an open-source HTML5 game engine that makes it easy to build cross-platform games. The game is a simple platformer where you control a character and navigate through a level. The game features a scoring system, collision detection, and a simple AI that allows the character to move around."
     },
     4: {
-        title: "AI Integration System",
-        image: "https://picsum.photos/800/600?random=4",
-        description: "An innovative AI system that integrates machine learning models into existing business processes. Built using Python and TensorFlow, it provides predictive analytics and automated decision-making capabilities."
+        title: "PokeDex Extension",
+        image: "assets/projects/pokedex-img.png",
+        description: `Chrome extension for looking up pokemon from the browser, using the <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">Pokemon API</a>, we can take the user's input of the pokemon name and look it up using HTTP requests. I also made this same application for mobile, using React Native!`
     },
     5: {
-        title: "IoT Smart Home",
-        image: "https://picsum.photos/800/600?random=5",
-        description: "A comprehensive smart home solution that connects and controls various IoT devices. Features include automated scheduling, energy monitoring, and remote control through a mobile app."
+        title: "SneezeIO",
+        image: "assets/projects/sneezeio-pic.png",
+        description: "This was more of a joke at the time but I decided to really build it. It's a desktop application that you would use to record sneezes! This was my first time building a desktop application. If you'd like to download it and give it a shot, you can do so by clicking the button below (only currently for Windows!)."
     },
     6: {
-        title: "Blockchain Solution",
-        image: "https://picsum.photos/800/600?random=6",
-        description: "A blockchain-based solution for secure and transparent record-keeping. Implemented using Ethereum smart contracts and Web3.js for seamless integration with existing web applications."
+        title: "MTG GatherHub",
+        image: "assets/projects/mtg-gatherhub.png",
+        description: "MTG GatherHub is a web application built with Laravel 10 that allows users to find games of Magic: The Gathering in their local area. Users can search for games by location, format, and date, and can also create and manage their own games. The application uses a combination of Google Maps and a custom-built algorithm to match players with games that fit their preferences. I built this application to help the Magic: The Gathering community find and connect with each other, and to provide a valuable service to players looking for games."
     }
 };
 
@@ -80,7 +80,7 @@ document.querySelectorAll('.project-card').forEach(card => {
         // Update modal content
         modalImage.src = project.image;
         modalTitle.textContent = project.title;
-        modalDescription.textContent = project.description;
+        modalDescription.innerHTML = project.description;
         
         // Show modal
         modal.style.display = 'block';
