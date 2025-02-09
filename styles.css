@@ -215,6 +215,7 @@ h2 i {
 .skill-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
 }
 
 .skill-item img {
