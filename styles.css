@@ -567,6 +567,7 @@ html {
 
     .projects-grid {
         padding: 0;
+        grid-template-columns: none;
     }
 
     .social-icons {
