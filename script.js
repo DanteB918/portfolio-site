@@ -31,7 +31,15 @@ window.addEventListener('scroll', () => {
 
 
 // Project data
-const projectData = fetch('./data/projects.json');
+async function getProjects() {
+    const response = await fetch('./data/projects.json');
+
+    return await response.json();
+}
+
+getProjects().then(data => {
+    projectData = data;
+});
 
 // Modal elements
 const modal = document.getElementById('projectModal');
